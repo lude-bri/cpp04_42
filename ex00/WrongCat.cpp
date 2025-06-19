@@ -14,13 +14,14 @@
 
 //Default Constructor
 WrongCat::WrongCat() {
-	std::cout << BLUE << "A WrongCat was created" << RESET << std::endl;
+	type = "WrongCat";
+	std::cout << CYAN << "A WrongCat was created" << RESET << std::endl;
 }
 
 //Default copy constructor
 WrongCat::WrongCat(const WrongCat &copy) {
 	*this = copy;
-	std::cout << BLUE << "A copy of a WrongCat was created" << RESET << std::endl;
+	std::cout << CYAN << "A copy of a WrongCat was created" << RESET << std::endl;
 }
 
 //Default copy assignment operator
@@ -30,5 +31,11 @@ WrongCat	&WrongCat::operator=(const WrongCat &copy) {
 
 //Default destructor
 WrongCat::~WrongCat() {
-	std::cout << BLUE << "A WrongCat was destroyed" << RESET << std::endl;
+	std::cout << CYAN << "A WrongCat was destroyed" << RESET << std::endl;
 }
+
+void	WrongCat::makeSound() {
+	std::cout << CYAN << "Grrrrrrr!" << RESET << std::endl;
+}
+
+std::string	WrongCat::getType() const {return type;}

@@ -24,4 +24,6 @@ public:
 	WrongCat &operator=(const WrongCat &copy);
 	~WrongCat();
 	
+	void			makeSound();
+	std::string		getType() const;
 };

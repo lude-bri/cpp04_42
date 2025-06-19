@@ -23,5 +23,7 @@ public:
 	Dog(const Dog &copy);
 	Dog &operator=(const Dog &copy);
 	~Dog();
-	
+
+	void			makeSound() const;
+	std::string		getType() const;
 };

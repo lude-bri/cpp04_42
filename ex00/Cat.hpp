@@ -24,4 +24,6 @@ public:
 	Cat &operator=(const Cat &copy);
 	~Cat();
 	
+	void			makeSound() const;
+	std::string		getType() const;
 };

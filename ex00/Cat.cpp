@@ -14,6 +14,7 @@
 
 //Default Constructor
 Cat::Cat() {
+	type = "Cat";
 	std::cout << YELLOW << "A Cat was created" << RESET << std::endl;
 }
 
@@ -32,3 +33,9 @@ Cat	&Cat::operator=(const Cat &copy) {
 Cat::~Cat() {
 	std::cout << YELLOW << "A Cat was destroyed" << RESET << std::endl;
 }
+
+void	Cat::makeSound() const {
+	std::cout << YELLOW << "Meow" << RESET << std::endl;
+}
+
+std::string	Cat::getType() const {return type;}

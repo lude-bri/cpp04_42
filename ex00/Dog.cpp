@@ -14,6 +14,7 @@
 
 //Default Constructor
 Dog::Dog() {
+	type = "Dog";
 	std::cout << BLUE << "A Dog was created" << RESET << std::endl;
 }
 
@@ -32,3 +33,9 @@ Dog	&Dog::operator=(const Dog &copy) {
 Dog::~Dog() {
 	std::cout << BLUE << "A Dog was destroyed" << RESET << std::endl;
 }
+
+void	Dog::makeSound() const {
+	std::cout << BLUE << "Woof!" << RESET << std::endl;
+}
+
+std::string	Dog::getType() const {return type;}
