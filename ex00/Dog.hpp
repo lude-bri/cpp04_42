@@ -10,4 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 
+//LIBRARIES
+#include "Animal.hpp"
+
+//CLASSES
+class Dog : public Animal {
+
+public:
+	Dog();
+	Dog(const Dog &copy);
+	Dog &operator=(const Dog &copy);
+	~Dog();
+	
+};

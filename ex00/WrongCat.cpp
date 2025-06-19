@@ -10,4 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "WrongCat.hpp"
 
+//Default Constructor
+WrongCat::WrongCat() {
+	std::cout << BLUE << "A WrongCat was created" << RESET << std::endl;
+}
+
+//Default copy constructor
+WrongCat::WrongCat(const WrongCat &copy) {
+	*this = copy;
+	std::cout << BLUE << "A copy of a WrongCat was created" << RESET << std::endl;
+}
+
+//Default copy assignment operator
+WrongCat	&WrongCat::operator=(const WrongCat &copy) {
+	return (*this);
+}
+
+//Default destructor
+WrongCat::~WrongCat() {
+	std::cout << BLUE << "A WrongCat was destroyed" << RESET << std::endl;
+}

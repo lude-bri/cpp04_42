@@ -27,6 +27,10 @@ TEMP_PATH		= .temp
 
 ### Files Source
 FILES = main.cpp
+FILES += Animal.cpp
+FILES += Cat.cpp
+FILES += Dog.cpp
+FILES += WrongCat.cpp
 
 ### Paths
 SRC		= $(addprefix $(SRC_PATH)/, $(FILES))

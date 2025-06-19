@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   WrongWrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,4 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 
+//LIBRARIES
+#include "Animal.hpp"
+
+//CLASSES
+class WrongCat : public Animal {
+
+public:
+	WrongCat();
+	WrongCat(const WrongCat &copy);
+	WrongCat &operator=(const WrongCat &copy);
+	~WrongCat();
+	
+};

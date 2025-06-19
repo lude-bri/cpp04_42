@@ -10,4 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Dog.hpp"
 
+//Default Constructor
+Dog::Dog() {
+	std::cout << BLUE << "A Dog was created" << RESET << std::endl;
+}
+
+//Default copy constructor
+Dog::Dog(const Dog &copy) {
+	*this = copy;
+	std::cout << BLUE << "A copy of a Dog was created" << RESET << std::endl;
+}
+
+//Default copy assignment operator
+Dog	&Dog::operator=(const Dog &copy) {
+	return (*this);
+}
+
+//Default destructor
+Dog::~Dog() {
+	std::cout << BLUE << "A Dog was destroyed" << RESET << std::endl;
+}
