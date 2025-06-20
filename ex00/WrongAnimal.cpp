@@ -6,7 +6,7 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 23:24:33 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/20 23:35:27 by luigi            ###   ########.fr       */
+/*   Updated: 2025/06/20 23:56:52 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,12 @@ WrongAnimal &WrongAnimal::operator=(const WrongAnimal &copy) {
 //Default destructor
 WrongAnimal::~WrongAnimal() {
 	std::cout << "Wrong Animal was destroyed" << std::endl;
+}
+
+void	WrongAnimal::makeSound() const {
+	std::cout << "Grrrrrrrrrrr!" << std::endl;
+}
+
+std::string		WrongAnimal::getType() const {
+	return (type);
 }

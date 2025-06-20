@@ -6,7 +6,7 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:18:22 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/18 21:18:23 by lude-bri         ###   ########.fr       */
+/*   Updated: 2025/06/21 00:09:06 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ WrongCat::~WrongCat() {
 	std::cout << CYAN << "A WrongCat was destroyed" << RESET << std::endl;
 }
 
-void	WrongCat::makeSound() {
-	std::cout << CYAN << "Grrrrrrr!" << RESET << std::endl;
+void	WrongCat::makeSound() const {
+	std::cout << CYAN << "Meow!" << RESET << std::endl;
 }
 
 std::string	WrongCat::getType() const {return type;}

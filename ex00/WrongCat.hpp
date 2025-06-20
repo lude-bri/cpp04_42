@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongWrongCat.hpp                                       :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:18:25 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/18 21:18:26 by lude-bri         ###   ########.fr       */
+/*   Updated: 2025/06/21 00:09:12 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 //LIBRARIES
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
 //CLASSES
-class WrongCat : public Animal {
+class WrongCat : public WrongAnimal {
 
 public:
 	WrongCat();
@@ -24,6 +24,6 @@ public:
 	WrongCat &operator=(const WrongCat &copy);
 	~WrongCat();
 	
-	void			makeSound();
+	void			makeSound() const;
 	std::string		getType() const;
 };

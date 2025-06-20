@@ -30,7 +30,8 @@ FILES = main.cpp
 FILES += Animal.cpp
 FILES += Dog.cpp
 FILES += Cat.cpp
-# FILES += WrongCat.cpp
+FILES += WrongAnimal.cpp
+FILES += WrongCat.cpp
 
 ### Paths
 SRC		= $(addprefix $(SRC_PATH)/, $(FILES))
