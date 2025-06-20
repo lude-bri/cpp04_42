@@ -9,7 +9,7 @@ SHELL	:= bash
 #                                     NAMES                                    #
 #==============================================================================#
 
-NAME			= 
+NAME			= Animal
 
 ###	Message Vars
 _NAME			= [$(MAG)cpp$(D)]
@@ -27,6 +27,11 @@ TEMP_PATH		= .temp
 
 ### Files Source
 FILES = main.cpp
+FILES += Animal.cpp
+FILES += Dog.cpp
+FILES += Cat.cpp
+FILES += WrongAnimal.cpp
+FILES += WrongCat.cpp
 
 ### Paths
 SRC		= $(addprefix $(SRC_PATH)/, $(FILES))
