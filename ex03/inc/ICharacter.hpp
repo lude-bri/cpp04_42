@@ -6,7 +6,7 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/21 17:19:58 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/21 17:30:27 by lude-bri         ###   ########.fr       */
+/*   Updated: 2025/06/21 21:03:47 by lude-bri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class AMateria;
 class ICharacter {
 
 public:
-	~ICharacter() {}
+	virtual ~ICharacter() {}
 	virtual std::string const &getName() const = 0;
 	virtual void equip(AMateria *m) = 0;
 	virtual void unequip(int idx) = 0;

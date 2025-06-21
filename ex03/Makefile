@@ -27,6 +27,11 @@ TEMP_PATH		= .temp
 
 ### Files Source
 FILES = main.cpp
+FILES += AMateria.cpp
+FILES += Character.cpp
+FILES += Cure.cpp
+FILES += Ice.cpp
+FILES += MateriaSource.cpp
 
 ### Paths
 SRC		= $(addprefix $(SRC_PATH)/, $(FILES))
