@@ -6,15 +6,15 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:18:19 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/21 00:07:10 by luigi            ###   ########.fr       */
+/*   Updated: 2025/06/21 02:45:38 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "Dog.hpp"
-#include "Cat.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
+#include "../inc/Animal.hpp"
+#include "../inc/Dog.hpp"
+#include "../inc/Cat.hpp"
+#include "../inc/WrongAnimal.hpp"
+#include "../inc/WrongCat.hpp"
 
 void	printTestHeader(const std::string &testName) {
 	std::cout << "\n";

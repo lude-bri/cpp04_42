@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/18 21:18:14 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/18 21:18:15 by lude-bri         ###   ########.fr       */
+/*   Created: 2025/06/18 21:18:00 by lude-bri          #+#    #+#             */
+/*   Updated: 2025/06/21 02:45:01 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "../inc/Animal.hpp"
 
 //Default Constructor
-Dog::Dog() {
-	type = "Dog";
-	std::cout << BLUE << "A Dog was created" << RESET << std::endl;
+Animal::Animal() {
+	type = "Animal";
+	std::cout << GREEN << "An Animal was created" << RESET << std::endl;
 }
 
 //Default copy constructor
-Dog::Dog(const Dog &copy) {
+Animal::Animal(const Animal &copy) {
 	*this = copy;
-	std::cout << BLUE << "A copy of a Dog was created" << RESET << std::endl;
+	std::cout << GREEN << "A copy of an Animal was created" << RESET << std::endl;
 }
 
 //Default copy assignment operator
-Dog	&Dog::operator=(const Dog &copy) {
+Animal	&Animal::operator=(const Animal &copy) {
 	return (*this);
 }
 
 //Default destructor
-Dog::~Dog() {
-	std::cout << BLUE << "A Dog was destroyed" << RESET << std::endl;
+Animal::~Animal() {
+	std::cout << GREEN << "An Animal was destroyed" << RESET << std::endl;
 }
 
-void	Dog::makeSound() const {
-	std::cout << BLUE << "Woof!" << RESET << std::endl;
+void	Animal::makeSound() const {
+	std::cout << GREEN << "Animal makes a very weird sound" << RESET << std::endl;
 }
 
-std::string	Dog::getType() const {return type;}
+std::string	Animal::getType() const {return type;}
