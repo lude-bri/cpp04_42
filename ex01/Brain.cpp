@@ -6,7 +6,7 @@
 /*   By: luigi <luigi@student.42porto.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/21 00:51:09 by luigi             #+#    #+#             */
-/*   Updated: 2025/06/21 01:27:05 by luigi            ###   ########.fr       */
+/*   Updated: 2025/06/21 02:12:29 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ Brain::~Brain() {
 std::string	Brain::getIdeas(int i) const {return ideas[i];}
 
 //setter of brains
-void		Brain::setIdeas(int i, std::string &idea) {
+void		Brain::setIdeas(int i, const std::string &idea) {
 	if (i < 0 || i >= 100) {
 		std::cout << "Ok Plato, no more ideas\n";
 		return ;

@@ -6,7 +6,7 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:18:17 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/21 01:40:46 by luigi            ###   ########.fr       */
+/*   Updated: 2025/06/21 02:07:35 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ public:
 
 	void			makeSound() const;
 	std::string		getType() const;
-	Brain			getBrain();
+	Brain			&getBrain();
 };

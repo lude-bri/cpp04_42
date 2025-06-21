@@ -6,7 +6,7 @@
 /*   By: luigi <luigi@student.42porto.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/21 00:49:54 by luigi             #+#    #+#             */
-/*   Updated: 2025/06/21 01:23:40 by luigi            ###   ########.fr       */
+/*   Updated: 2025/06/21 02:14:17 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ public:
 
 	std::string ideas[100];
 	std::string	getIdeas(int i) const;
-	void		setIdeas(int i, std::string &idea);
+	void		setIdeas(int i, const std::string &idea);
 };
 
