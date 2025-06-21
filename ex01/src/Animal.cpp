@@ -6,7 +6,7 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:18:00 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/21 02:40:30 by luigi            ###   ########.fr       */
+/*   Updated: 2025/06/21 14:31:44 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ Animal::Animal(const Animal &copy) {
 
 //Default assignment operator
 Animal	&Animal::operator=(const Animal &copy) {
+	type = copy.type;
 	return (*this);
 }
 
