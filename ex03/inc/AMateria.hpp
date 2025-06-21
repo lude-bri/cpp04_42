@@ -6,7 +6,7 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/21 17:09:22 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/21 17:34:30 by lude-bri         ###   ########.fr       */
+/*   Updated: 2025/06/21 18:00:00 by lude-bri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class ICharacter;
 class AMateria {
 
 protected:
-	std::string type;
+	std::string _type;
 
 public:
 	AMateria();
