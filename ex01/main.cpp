@@ -6,7 +6,7 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:18:19 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/21 00:07:10 by luigi            ###   ########.fr       */
+/*   Updated: 2025/06/21 01:58:06 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,106 +24,21 @@ void	printTestHeader(const std::string &testName) {
 
 int	main(void) {
 
-	std::cout << BOLD << MAGENTA << "== TEST EX00 ==" << RESET << std::endl;
+	std::cout << BOLD << MAGENTA << "== TEST EX01 ==" << RESET << std::endl;
 
-	printTestHeader("Test 00. Builing");
+	printTestHeader("Test 00. Subject Test");
 	{
-		Animal	*generic = new Animal();
-		std::cout << generic->getType() << " " << std::endl;
-		generic->makeSound();
-
-		Animal	*dog = new Dog();
-		std::cout << dog->getType() << " " << std::endl;
-		dog->makeSound();
-
-		Animal *cat = new Cat();
-		std::cout << cat->getType() << " " << std::endl;
-		cat->makeSound();
-
-		delete cat;
-		delete dog;
-		delete generic;
-	}
-
-	printTestHeader("Test 01. Array of Animals");
-	{
-		Animal	*zoo[4];
-
-		zoo[0] = new Dog;
-		zoo[1] = new Cat;
-		zoo[2] = new Cat;
-		zoo[3] = new Dog;
-
-		for (int i = 0; i < 4; i++) {
-			zoo[i]->makeSound();
-			delete zoo[i];
-		}
-	}
-
-	printTestHeader("Test 02. Generic animal vs Specific Animal");
-	{
-		Animal	animal;
-		Dog		dog;
-
-		dog.makeSound();
-	}
-
-	printTestHeader("Test 03. WrongAnimal and WrongCat");
-	{
-		WrongAnimal *bizarre = new WrongCat;
-
-		bizarre->makeSound();
-
-		delete bizarre;
-	}
-
-	printTestHeader("Test 04. Subject's Wrong Animal");
-	{
-		const Animal* meta = new Animal();
-		const Animal* j = new Dog();
-		const WrongAnimal* i = new WrongCat();
-
-		std::cout << j->getType() << " " << std::endl;
-		std::cout << i->getType() << " " << std::endl;
-		i->makeSound();
-		j->makeSound();
-		meta->makeSound();
-		delete i;
-		delete j;
-		delete meta;
-	}
-
-	printTestHeader("Test 05. Subject's Main");
-	{
-		const Animal* meta = new Animal();
 		const Animal* j = new Dog();
 		const Animal* i = new Cat();
 
-		std::cout << j->getType() << " " << std::endl;
-		std::cout << i->getType() << " " << std::endl;
-		i->makeSound();
-		j->makeSound();
-		meta->makeSound();
-		delete i;
 		delete j;
-		delete meta;
+		delete i;
+	}
+	printTestHeader("Test");
+	{
+		Animal *dog = new Dog();
+		std::cout << dog->getType() << " " << std::endl;
 	}
 }
 
-// SUBJECTs MAIN
-// int	main(void) {
-//
-// 	const Animal* meta = new Animal();
-// 	const Animal* j = new Dog();
-// 	const Animal* i = new Cat();
-//
-// 	std::cout << j->getType() << " " << std::endl;
-// 	std::cout << i->getType() << " " << std::endl;
-// 	i->makeSound();
-// 	j->makeSound();
-// 	meta->makeSound();
-// 	delete i;
-// 	delete j;
-// 	delete meta;
-// 	return (0);
-// }=
+

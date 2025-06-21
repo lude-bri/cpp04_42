@@ -6,16 +6,14 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:18:14 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/21 01:11:28 by luigi            ###   ########.fr       */
+/*   Updated: 2025/06/21 01:57:08 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
 //Default Constructor
-Dog::Dog() {
-	type = "Dog";
-	brain = new Brain();
+Dog::Dog() : Animal("Dog"), brain(new Brain()) {
 	std::cout << BLUE << "A Dog was created" << RESET << std::endl;
 }
 
@@ -41,3 +39,5 @@ void	Dog::makeSound() const {
 }
 
 std::string	Dog::getType() const {return type;}
+
+Brain	Dog::getBrain() {return *brain;}

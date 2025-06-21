@@ -6,7 +6,7 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:18:05 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/21 00:58:17 by luigi            ###   ########.fr       */
+/*   Updated: 2025/06/21 01:55:41 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ protected:
 
 public:
 	Animal();
+	Animal(const std::string &type);
 	Animal(const Animal &copy);
 	Animal &operator=(const Animal &copy);
 	virtual ~Animal();

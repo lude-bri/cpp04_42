@@ -9,7 +9,7 @@ SHELL	:= bash
 #                                     NAMES                                    #
 #==============================================================================#
 
-NAME			= Animal
+NAME			= Brain
 
 ###	Message Vars
 _NAME			= [$(MAG)cpp$(D)]
@@ -30,6 +30,7 @@ FILES = main.cpp
 FILES += Animal.cpp
 FILES += Dog.cpp
 FILES += Cat.cpp
+FILES += Brain.cpp
 FILES += WrongAnimal.cpp
 FILES += WrongCat.cpp
 
