@@ -6,15 +6,14 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:18:08 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/21 01:54:23 by luigi            ###   ########.fr       */
+/*   Updated: 2025/06/21 02:00:03 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
 //Default Constructor
-Cat::Cat() : brain(new Brain()) {
-	type = "Cat";
+Cat::Cat() : Animal("Cat"), brain(new Brain()) {
 	std::cout << YELLOW << "A Cat was created" << RESET << std::endl;
 }
 
