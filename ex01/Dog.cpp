@@ -6,7 +6,7 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:18:14 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/21 01:04:41 by luigi            ###   ########.fr       */
+/*   Updated: 2025/06/21 01:11:28 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 //Default Constructor
 Dog::Dog() {
 	type = "Dog";
-	idea = new Brain();
+	brain = new Brain();
 	std::cout << BLUE << "A Dog was created" << RESET << std::endl;
 }
 
@@ -32,7 +32,7 @@ Dog	&Dog::operator=(const Dog &copy) {
 
 //Default destructor
 Dog::~Dog() {
-	delete idea;
+	delete brain;
 	std::cout << BLUE << "A Dog was destroyed" << RESET << std::endl;
 }
 

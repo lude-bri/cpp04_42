@@ -6,7 +6,7 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:18:08 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/21 01:04:52 by luigi            ###   ########.fr       */
+/*   Updated: 2025/06/21 01:11:20 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 //Default Constructor
 Cat::Cat() {
 	type = "Cat";
-	idea = new Brain();
+	brain = new Brain();
 	std::cout << YELLOW << "A Cat was created" << RESET << std::endl;
 }
 
@@ -32,7 +32,7 @@ Cat	&Cat::operator=(const Cat &copy) {
 
 //Default destructor
 Cat::~Cat() {
-	delete idea;
+	delete brain;
 	std::cout << YELLOW << "A Cat was destroyed" << RESET << std::endl;
 }
 
