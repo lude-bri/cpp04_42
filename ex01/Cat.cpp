@@ -6,7 +6,7 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:18:08 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/18 21:18:10 by lude-bri         ###   ########.fr       */
+/*   Updated: 2025/06/21 01:03:53 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 //Default Constructor
 Cat::Cat() {
 	type = "Cat";
+	idea = new Brain();
 	std::cout << YELLOW << "A Cat was created" << RESET << std::endl;
 }
 
