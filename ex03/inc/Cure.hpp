@@ -6,7 +6,7 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/21 17:25:01 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/21 17:40:41 by lude-bri         ###   ########.fr       */
+/*   Updated: 2025/06/21 18:22:33 by lude-bri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include "AMateria.hpp"
 
-class Cure {
+class Cure : public AMateria {
 public:
 	Cure();
 	Cure(const Cure &); 
