@@ -6,11 +6,11 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:18:08 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/21 02:37:18 by luigi            ###   ########.fr       */
+/*   Updated: 2025/06/21 02:40:50 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "../inc/Cat.hpp"
 
 //Default Constructor
 Cat::Cat() : Animal("Cat"), brain(new Brain()) {

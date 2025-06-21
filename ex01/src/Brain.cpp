@@ -6,11 +6,11 @@
 /*   By: luigi <luigi@student.42porto.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/21 00:51:09 by luigi             #+#    #+#             */
-/*   Updated: 2025/06/21 02:12:29 by luigi            ###   ########.fr       */
+/*   Updated: 2025/06/21 02:40:41 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Brain.hpp"
+#include "../inc/Brain.hpp"
 
 //Default constructor
 Brain::Brain() {

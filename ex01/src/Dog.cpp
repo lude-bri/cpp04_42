@@ -6,11 +6,11 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:18:14 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/21 02:21:38 by luigi            ###   ########.fr       */
+/*   Updated: 2025/06/21 02:40:58 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "../inc/Dog.hpp"
 
 //Default Constructor
 Dog::Dog() : Animal("Dog"), brain(new Brain()) {

@@ -6,11 +6,11 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:18:22 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/21 00:09:06 by luigi            ###   ########.fr       */
+/*   Updated: 2025/06/21 02:41:37 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongCat.hpp"
+#include "../inc/WrongCat.hpp"
 
 //Default Constructor
 WrongCat::WrongCat() {
