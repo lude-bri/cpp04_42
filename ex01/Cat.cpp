@@ -6,7 +6,7 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:18:08 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/21 01:03:53 by luigi            ###   ########.fr       */
+/*   Updated: 2025/06/21 01:04:52 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ Cat	&Cat::operator=(const Cat &copy) {
 
 //Default destructor
 Cat::~Cat() {
+	delete idea;
 	std::cout << YELLOW << "A Cat was destroyed" << RESET << std::endl;
 }
 
