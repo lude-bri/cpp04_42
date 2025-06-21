@@ -6,7 +6,7 @@
 /*   By: lude-bri <lude-bri@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:18:05 by lude-bri          #+#    #+#             */
-/*   Updated: 2025/06/18 21:18:06 by lude-bri         ###   ########.fr       */
+/*   Updated: 2025/06/21 00:58:17 by luigi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 //LIBRARIES
 #include <iostream>
+#include "Brain.hpp"
 
 //COLORS
 # define RED     "\033[31m"
