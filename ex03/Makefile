@@ -9,7 +9,7 @@ SHELL	:= bash
 #                                     NAMES                                    #
 #==============================================================================#
 
-NAME			= Interface 
+NAME			= Interface
 
 ###	Message Vars
 _NAME			= [$(MAG)cpp$(D)]

@@ -12,12 +12,16 @@
 
 #include "../inc/MateriaSource.hpp"
 
+//Default constructor
 MateriaSource::MateriaSource() : _count(0) {
+	DEBUG_MSG("MateriaSource default constructor was called");
 	for (int i = 0; i < 4; i++)
 		_materias[i] = NULL;
 }
 
+//Default copy constructor
 MateriaSource::MateriaSource(const MateriaSource &copy) : _count(copy._count) {
+	DEBUG_MSG("MateriaSource copy constructor was called");
 	for (int i = 0; i < 4; i++) 
 	{
 		if (copy._materias[i])
@@ -27,7 +31,9 @@ MateriaSource::MateriaSource(const MateriaSource &copy) : _count(copy._count) {
 	}
 }
 
+//Default copy assignment operator
 MateriaSource &MateriaSource::operator=(const MateriaSource &copy) {
+	DEBUG_MSG("MateriaSource copy assignment operator was called");
 	if (this != &copy)
 	{
 		_count = copy._count;
@@ -43,21 +49,27 @@ MateriaSource &MateriaSource::operator=(const MateriaSource &copy) {
 	return *this;
 }
 
+//Default destructor
 MateriaSource::~MateriaSource() {
+	DEBUG_MSG("MateriaSource destructor was called");
 	for (int i = 0; i < 4; i++)
 		if (_materias[i])
 			delete _materias[i];
 }
 
-void	MateriaSource::learnMateria(AMateria *learn) {
-	if (_count < 4 && learn)
+//Learn Materia Method
+void	MateriaSource::learnMateria(AMateria *materia) {
+	DEBUG_MSG("MateriaSource LEARN METHOD was called");
+	if (_count < 4 && materia)
 	{
-		_materias[_count] = learn;
+		_materias[_count] = materia;
 		_count++;
 	}
 }
 
+//Create Materia Method
 AMateria	*MateriaSource::createMateria(std::string const &type) {
+	DEBUG_MSG("MateriaSource CREATE METHOD was called");
 	for (int i = 0; i < _count; i++) {
 		if (_materias[i] && _materias[i]->getType() == type)
 			return _materias[i]->clone();
