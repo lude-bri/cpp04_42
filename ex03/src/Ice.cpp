@@ -14,7 +14,12 @@
 #include <iostream>
 
 //Default constructor
-Ice::Ice() : AMateria("ice") {}
+Ice::Ice() : AMateria("ice") {
+
+#ifdef DEBUG
+	std::cout << "Ice constructor was called" << std::endl;
+#endif
+}
 
 //Copy Constructor
 Ice::Ice(const Ice &copy) : AMateria(copy) {}

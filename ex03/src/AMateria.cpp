@@ -14,16 +14,23 @@
 #include "../inc/ICharacter.hpp"
 
 //Default constructor
-AMateria::AMateria() : _type("Default") {}
+AMateria::AMateria() : _type("Default") {
+	DEBUG_MSG("AMateria default constructor was called");
+}
 
 //Constructor
-AMateria::AMateria(std::string const &type) : _type(type) {}
+AMateria::AMateria(std::string const &type) : _type(type) {
+	DEBUG_MSG("AMateria constructor was called");
+}
 
 //Default copy constructor
-AMateria::AMateria(const AMateria &copy) : _type(copy._type) {}
+AMateria::AMateria(const AMateria &copy) : _type(copy._type) {
+	DEBUG_MSG("AMateria copy constructor was called");
+}
 
 //Default copy assignment operator
 AMateria &AMateria::operator=(const AMateria &copy) {
+	DEBUG_MSG("AMateria copy assignment operator was called");
 	if (this != &copy)
 		_type = copy._type;
 	return *this;
@@ -31,6 +38,7 @@ AMateria &AMateria::operator=(const AMateria &copy) {
 
 //Default destructor
 AMateria::~AMateria() {
+	DEBUG_MSG("AMateria destructor was called");
 }
 
 //getter
