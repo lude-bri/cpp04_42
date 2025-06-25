@@ -65,6 +65,8 @@ void	MateriaSource::learnMateria(AMateria *materia) {
 		_materias[_count] = materia;
 		_count++;
 	}
+	else
+		delete materia;
 }
 
 //Create Materia Method

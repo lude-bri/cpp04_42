@@ -13,19 +13,25 @@
 #include "../inc/Character.hpp"
 
 //Default Constructor
-Character::Character() : _name("Default Character") {
+Character::Character() : _name("Default Character"), _idxFloor(0) {
 	DEBUG_MSG("Character default constructor was called");
+	for (int i = 0; i < 4; i++) {
+		_inventory[i] = NULL;
+		_floor[i] = NULL;
+	}
 }
 
 //Constructor
-Character::Character(std::string const &name) : _name(name) {
+Character::Character(std::string const &name) : _name(name), _idxFloor(0) {
 	DEBUG_MSG("Character constructor was called");
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < 4; i++) {
 		_inventory[i] = NULL;
+		_floor[i] = NULL;
+	}
 }
 
 //Default copy constructor
-Character::Character(const Character &copy) : _name(copy._name) {
+Character::Character(const Character &copy) : _name(copy._name), _idxFloor(copy._idxFloor) {
 	DEBUG_MSG("Character copy constructor was called");
 	for (int i = 0; i < 4; i++)
 	{
@@ -33,6 +39,12 @@ Character::Character(const Character &copy) : _name(copy._name) {
 			_inventory[i] = copy._inventory[i]->clone();
 		else
 			_inventory[i] = NULL;
+	}
+	while (copy._idxFloor) {
+		if (copy._floor[_idxFloor])
+			_floor[_idxFloor] = copy._floor[_idxFloor]->clone();
+		else
+			_floor[_idxFloor] = NULL;
 	}
 }
 
@@ -51,6 +63,13 @@ Character &Character::operator=(const Character &copy) {
 			else
 				_inventory[i] = NULL;
 		}
+		_idxFloor = copy._idxFloor;
+		while (copy._idxFloor) {
+			if (copy._floor[_idxFloor])
+				_floor[_idxFloor] = copy._floor[_idxFloor]->clone();
+			else
+				_floor[_idxFloor] = NULL;
+		}
 	}
 	return *this;
 }
@@ -59,10 +78,10 @@ Character &Character::operator=(const Character &copy) {
 Character::~Character() {
 	DEBUG_MSG("Character destructor was called");
 	for (int i = 0; i < 4; i++)
-	{
 		if (_inventory[i])
 			delete _inventory[i];
-	}
+	while (--_idxFloor >= 0)
+		delete _floor[_idxFloor];
 }
 
 //Getter method
@@ -74,26 +93,45 @@ std::string const &Character::getName() const {
 //Setter method
 void	Character::equip(AMateria *m) {
 	DEBUG_MSG("Character EQUIP METHOD was called");
+
+	if (!m)
+		return ;
 	for (int i = 0; i < 4; i++)
 	{
 		if (!_inventory[i])
 		{
 			_inventory[i] = m;
-			break;
+			return ;
 		}
 	}
+	delete m;
 }
 
-//Unset method
+//Unset method (must not delete the Materia)
 void	Character::unequip(int idx) {
 	DEBUG_MSG("Character UNEQUIP METHOD was called");
+	if (idx < 0 || idx > 3 )
+		return ;
+	handleDrop(_inventory[idx]);
 	if (idx >= 0 && idx < 4)
 		_inventory[idx] = NULL;
 }
 
 //use method
+//will have to use Materia at the slot[idx] and pass
+//the target parameter to AMateria::use
 void	Character::use(int idx, ICharacter &target) {
 	DEBUG_MSG("Character USE METHOD was called");
 	if (idx >= 0 && idx < 4 && _inventory[idx])
 		_inventory[idx]->use(target);
+}
+
+//Dropping spells on the floor
+void	Character::handleDrop(AMateria *m) {
+	DEBUG_MSG("Source was Dropped");
+	if (_idxFloor >= 99)
+		while (_idxFloor >= 0)
+			delete _floor[--_idxFloor];
+	_floor[_idxFloor] = m;
+	_idxFloor += 1;
 }

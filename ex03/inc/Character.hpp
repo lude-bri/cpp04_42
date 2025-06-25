@@ -29,8 +29,11 @@
 
 class Character : public ICharacter {
 private:
-	std::string _name;
-	AMateria *_inventory[4]; // slots!
+	std::string		_name;
+	AMateria	*_inventory[4]; // slots!
+	AMateria	*_floor[99];
+	void		handleDrop(AMateria *m);
+	int			_idxFloor;
 
 public:
 	Character();
@@ -43,6 +46,5 @@ public:
 	void	equip(AMateria *m);
 	void	unequip(int idx);
 	void	use(int idx, ICharacter &target);
-	
 };
 
