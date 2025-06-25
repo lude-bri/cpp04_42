@@ -55,45 +55,39 @@ int	main(void) {
 	}
 	printTestHeader("Test 01. Learn and create");
 	{
-		IMateriaSource *src = new MateriaSource;
-		src->learnMateria(new Ice());
-		src->learnMateria(new Cure());
+		IMateriaSource *bookOfSpells = new MateriaSource;
+		bookOfSpells->learnMateria(new Ice());
+		bookOfSpells->learnMateria(new Cure());
 
-		AMateria *m1 = src->createMateria("ice");
-		AMateria *m2 = src->createMateria("cure");
-		AMateria *m3 = src->createMateria("fire");
+		AMateria *m1 = bookOfSpells->createMateria("ice");
+		AMateria *m2 = bookOfSpells->createMateria("cure");
+		AMateria *m3 = bookOfSpells->createMateria("fire");
 
 		std::cout << "m1 type: " << (m1 ? m1->getType() : "null") << std::endl;
 		std::cout << "m2 type: " << (m2 ? m2->getType() : "null") << std::endl;
 		std::cout << "m3 type: " << (m3 ? m3->getType() : "null") << std::endl;
 
-		delete src;
+		delete bookOfSpells;
 		delete m1;
 		delete m2;
 	}
 	printTestHeader("Test 02. Stress Materias");
 	{
-		IMateriaSource *src = new MateriaSource;
-		src->learnMateria(new Ice());
-		src->learnMateria(new Cure());
-		src->learnMateria(new Ice());
-		src->learnMateria(new Cure());
+		IMateriaSource *bookOfSpells = new MateriaSource;
+		bookOfSpells->learnMateria(new Ice());
+		bookOfSpells->learnMateria(new Cure());
+		bookOfSpells->learnMateria(new Ice());
+		bookOfSpells->learnMateria(new Cure());
 
-		src->learnMateria(new Ice());
-		src->learnMateria(new Ice());
-		src->learnMateria(new Ice());
-		src->learnMateria(new Ice());
-		src->learnMateria(new Ice());
-		src->learnMateria(new Ice());
-		src->learnMateria(new Ice());
-		src->learnMateria(new Ice());
+		for (int i = 0; i < 10; i++)
+			bookOfSpells->learnMateria(new Ice());
 
 		AMateria *tmp;
-		tmp = src->createMateria("ice");
+		tmp = bookOfSpells->createMateria("ice");
 		std::cout << "Created: " << (tmp ? tmp->getType() : "null") << std::endl;
 
 		delete tmp;
-		delete src;
+		delete bookOfSpells;
 	}
 	printTestHeader("Test 03. Stress Inventory");
 	{
